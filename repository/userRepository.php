@@ -2,6 +2,9 @@
 
 require_once "config/database.php";
 
+
+// Création de l'utilisateur
+
 function createUser(string $email, string $name, string $password){
     
     $pdo = getConnexion();
@@ -11,6 +14,9 @@ function createUser(string $email, string $name, string $password){
     $query->execute([$email, $name, $password]);
 }
 
+
+
+// Prendre l'email de l'utilisateur
 function getUserByEmail(string $email){
     
     $pdo = getConnexion();
@@ -22,7 +28,8 @@ function getUserByEmail(string $email){
     return $query->fetch();
 }
 
-function deleteUser(int $userId) {
+//Supprimer le compte
+function deleteAccount(int $userId) {
     
     $pdo = getConnexion();
     

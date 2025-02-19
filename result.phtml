@@ -1,7 +1,15 @@
-<div>
-    <h1>Votre personnage est <?= $personnage ?></h1>
-    
-    <img href=<?= $imagePerso ?>>
-    
-    <p><?= $descriptionPerso ?></p>
+<div class="result-container">
+    <?php if (isset($feature) && $feature): ?>
+        <h2>Je pense à... <?= htmlspecialchars($feature['name']) ?></h2>
+        <div class="feature-card">
+            <img src="<?= htmlspecialchars($feature['img']) ?>" alt="<?= htmlspecialchars($feature['name']) ?>">
+            <p><?= htmlspecialchars($feature['description']) ?></p>
+        </div>
+        <div class="button-container">
+            <a href="index.php" class="button">Rejouer</a>
+        </div>
+    <?php else: ?>
+        <p>Aucun personnage trouvé</p>
+        <a href="index.php" class="button">Retour à l'accueil</a>
+    <?php endif; ?>
 </div>
