@@ -1,0 +1,19 @@
+<div class="quiz-container">
+    <?php
+    // Récupérer la première question (where is_first_question = 1)
+    $currentQuestion = getQuestionsById($_GET['question_id'] ?? 1);
+    
+    if ($currentQuestion): ?>
+        <div class="question">
+            <h2><?= htmlspecialchars($currentQuestion['question_text']) ?></h2>
+            
+            <div class="answers">
+                <!-- Les boutons Oui/Non qui mèneront aux questions suivantes -->
+                <a href="quiz.php?answer=1&question_id=<?= $currentQuestion['id'] ?>" class="button">Oui</a>
+                <a href="quiz.php?answer=0&question_id=<?= $currentQuestion['id'] ?>" class="button">Non</a>
+            </div>
+        </div>
+    <?php else: ?>
+        <p>Question non trouvée</p>
+    <?php endif; ?>
+</div>
