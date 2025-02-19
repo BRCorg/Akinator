@@ -7,6 +7,11 @@
     
     <div class="button-container">
     <button type="submit">
+    <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+        <a href="quiz.php">Commencer le jeu</a>
+    <?php else: ?>
+        <a href="connexion.php">Connectez-vous</a>
+    <?php endif; ?>
         
         
     </button>
