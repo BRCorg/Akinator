@@ -18,7 +18,12 @@ $featureId = isset($_GET['feature_id']) ? $_GET['feature_id'] : null;
 
 $feature = getFeatureById($featureId); 
 
-
+//on va insérer l'historique pour l'utilisateur
+    $result = $feature['name'];
+    $id_feature = $featureId;
+    $id_user = $_SESSION['user_id'];
+    
+    saveUserGame( $result, $id_feature, $id_user);
 
 $template = "result";
 include "layout.phtml";

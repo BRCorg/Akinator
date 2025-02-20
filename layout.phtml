@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/0a4bedb4d5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Gestionnaire des tâches</title>
+    <title>AkiDNator</title>
 </head>
 
 <body>
@@ -24,7 +24,10 @@
                 <ul>
                     <li class="connexion"><a href="connexion.php">Connexion</a></li>
                     <li class="inscription"><a href="signup.php">Inscription</a></li>
-                    <li class="deconnexion"><a href="logout.php"<i class="fa-solid fa-right-from-bracket"></a>></li>
+                    <?php if(isset($_SESSION['user'])): ?> 
+                    <li class="account"><a href="account.php"<i class="fa-solid fa-circle-user"></i></a></li>
+                    <li class="deconnexion"><a href="logout.php"<i class="fa-solid fa-right-from-bracket"></i></a></li>
+                    <?php endif ?>
                 </ul>
             </div>
             

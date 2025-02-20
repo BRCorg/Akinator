@@ -12,6 +12,17 @@ if (!isset($_SESSION['user'])) {
     exit();
 }
 
+$id_user = $_SESSION['user_id'];
+
+$infos = displayUserGame($id_user);
+
+// var_dump($id_user);
+// var_dump($infos);
+
+
+
+
+
 //si le form a été soumis ($_POST n'est pas vide)
 if (!empty($_POST)) {
     $ancienMotDePasse = $_POST['motDePasseActuel'] ?? '';

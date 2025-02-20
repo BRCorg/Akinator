@@ -1,6 +1,8 @@
 <div>
     <h1>Historique des parties</h1>
-
+    <?php foreach($infos as $info): ?>
+    <p>Vous avez eu comme résultat : <strong><?= $info ['result'] ?></strong> le <?= $info ['date'] ?></p>
+    <?php endforeach ?>
     
     <a class="Jouer" href="quiz.php">Jouer</a>
     
@@ -8,10 +10,10 @@
     
     <form method="POST">
         <label for="motDePasseActuel">Mot de passe actuel</label>
-        <input type="password" name="motDePasseActuel" id="motDePasseActuel"/>
+        <input type="password" name="motDePasseActuel" id="motDePasseActuel" required/>
         
         <label for="passwordChange">Nouveau mot de passe</label>
-        <input type="password" name="passwordChange" id="passwordChange"/>
+        <input type="password" name="passwordChange" id="passwordChange" required/>
         
         <button type="submit" name="envoyerMDP">Changer de mot de passe</button>
         
