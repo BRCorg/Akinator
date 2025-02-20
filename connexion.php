@@ -10,7 +10,7 @@ session_start();
 
 // Si l'utilisateur est déjà connecté, rediriger vers quiz.php
 if (isset($_SESSION['user']) && isset($_SESSION['user_id'])) {
-    header('Location: quiz.php');
+    header('Location: index.php');
     exit();
 }
 

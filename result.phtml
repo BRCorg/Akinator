@@ -3,10 +3,10 @@
         <h2>Je pense à... <?= htmlspecialchars($feature['name']) ?></h2>
         <div class="feature-card">
             <img src="<?= htmlspecialchars($feature['img']) ?>" alt="<?= htmlspecialchars($feature['name']) ?>">
-            <p><?= htmlspecialchars($feature['description']) ?></p>
+            <p class="espacement"><?= htmlspecialchars($feature['description']) ?></p>
         </div>
         <div class="button-container">
-            <a href="index.php" class="button">Rejouer</a>
+            <a href="index.php" class="button1">Rejouer</a>
         </div>
     <?php else: ?>
         <p>Aucun personnage trouvé</p>
