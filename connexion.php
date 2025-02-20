@@ -26,8 +26,9 @@ if (!empty($_POST)) {
             // Stockage des informations utilisateur dans la session
             $_SESSION['user'] = $user['name'];
             $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_email'] = $user['email'];
             
-            header('Location: index.php');
+            header('Location: account.php');
             exit();
         } else {
             $error = "Email ou mot de passe incorrect";

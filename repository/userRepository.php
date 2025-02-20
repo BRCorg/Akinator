@@ -37,3 +37,17 @@ function deleteAccount(int $userId) {
     
     $query->execute([$userId]);
 }
+
+function updatePassword (int $id_user,string $nouveauMotDePasse) {
+    
+     $pdo = getConnexion();
+    
+    $query = $pdo->prepare("UPDATE `user` SET `password`= ? WHERE `id` = ?");
+    
+    $test = $query->execute([$nouveauMotDePasse, $id_user]);
+    
+    return $test;
+}
+
+
+

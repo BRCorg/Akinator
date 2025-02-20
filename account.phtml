@@ -1,14 +1,21 @@
 <div>
+    <h1>Historique des parties</h1>
+
     
+    <a class="Jouer" href="quiz.php">Jouer</a>
     
+    <h2>Changer de mot de passe</h2>
     
-    
-    
-    
-    
-    
-    
-    
+    <form method="POST">
+        <label for="motDePasseActuel">Mot de passe actuel</label>
+        <input type="password" name="motDePasseActuel" id="motDePasseActuel"/>
+        
+        <label for="passwordChange">Nouveau mot de passe</label>
+        <input type="password" name="passwordChange" id="passwordChange"/>
+        
+        <button type="submit" name="envoyerMDP">Changer de mot de passe</button>
+        
+    </form>
     
     <button type="submit" name="delete_account">Supprimer mon compte</button>
 </div>
