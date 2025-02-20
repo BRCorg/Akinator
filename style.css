@@ -108,6 +108,7 @@ footer p {
     padding: 2em;
     margin: 2em 26em;
     border-radius: 1em;
+    text-align: center;
 }
 
 h2 {
@@ -121,7 +122,7 @@ img {
 .imgOnePiece {
     max-height: 350px;
     width: 45%;
-    margin-left: 10em;
+    /*margin-left: 10em;*/
 }
 
 .feature-card {
