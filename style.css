@@ -60,6 +60,7 @@ ul {
 a {
     text-decoration: none;
     color: Black;
+    font-weight: bold;
 }
 
 li {
@@ -115,7 +116,12 @@ h2 {
 
 img {
     max-height: 350px;
-    
+}
+
+.imgOnePiece {
+    max-height: 350px;
+    width: 45%;
+    margin-left: 10em;
 }
 
 .feature-card {
@@ -156,8 +162,29 @@ form {
 input {
     padding: 0.5em;
     margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .connect {
     text-decoration: underline;
+}
+
+.signup1 {
+    text-decoration: underline;
+}
+
+.carre {
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+    color: white;
+    margin-top: 1em;
+}
+
+.account1 {
+    background-color: #ffffffc9;
+    margin: 0 20em 0 20em;
+    border-radius: 0.5em;
 }

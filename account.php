@@ -28,12 +28,16 @@ if (!empty($_POST)) {
     $ancienMotDePasse = $_POST['motDePasseActuel'] ?? '';
     $nouveauMotDePasse = $_POST['passwordChange'] ?? '';
     
-    var_dump($ancienMotDePasse);
-    var_dump($nouveauMotDePasse);
+    // var_dump($ancienMotDePasse);
+    // var_dump($nouveauMotDePasse);
+    
+    //on stock l'email et l'id
     
     $email = $_SESSION['user_email'];
     $id_user = $_SESSION['user_id'];
     
+    
+    //On identifie l'user grâce à son email
     $user = getUserByEmail($email);
     
     // var_dump($user);    

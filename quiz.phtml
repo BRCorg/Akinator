@@ -1,10 +1,12 @@
 <div class="quiz-container">
+    
     <?php
     // Récupérer la première question (where is_first_question = 1)
     $currentQuestion = getQuestionsById($_GET['question_id'] ?? 1);
     
     if ($currentQuestion): ?>
         <div class="question">
+            <img class="imgOnePiece" src="images/OnePieceLogo.png" alt="One piece logo">
             <h2><?= htmlspecialchars($currentQuestion['question_text']) ?></h2>
             
             <div class="answers">

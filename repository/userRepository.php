@@ -38,6 +38,8 @@ function deleteAccount(int $userId) {
     $query->execute([$userId]);
 }
 
+    // Pour changer le mot de passe
+    
 function updatePassword (int $id_user,string $nouveauMotDePasse) {
     
      $pdo = getConnexion();
