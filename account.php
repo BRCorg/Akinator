@@ -56,7 +56,12 @@ if (!empty($_POST)) {
     }
 }
 
-
+if (isset($_POST['delete_account'])) {
+    deleteAccount($_SESSION['user_id']);
+    session_destroy();
+    header("Location: index.php");
+exit;
+}
 
 
 
